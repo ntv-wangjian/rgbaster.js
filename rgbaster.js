@@ -19,10 +19,14 @@ var getImageData = function(img, loaded){
     imgObj.crossOrigin = "Anonymous";
 
   imgObj.onload = function(){
-    var context = getContext(imgObj.width, imgObj.height);
-    context.drawImage(imgObj, 0, 0);
+    var usewd   = 30;
+    var useht   = 200;
+    var width   = imgObj.width>usewd?usewd:imgObj.width;
+    var height  = imgObj.height>useht?useht:imgObj.height;
+	  var context = getContext(width, height);
+    context.drawImage(imgObj, 0, 0,width,height);
 
-    var imageData = context.getImageData(0, 0, imgObj.width, imgObj.height);
+    var imageData = context.getImageData(0, 0, width,height);
     loaded && loaded(imageData.data);
   };
 
