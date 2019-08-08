@@ -1,4 +1,4 @@
-# <img src="https://rawgithub.com/briangonzalez/rgbaster.js/master/demo/baster.svg" width=25 style="margin-right: 10px"> RGBaster 
+# RGBaster 
 
 从一副图片中提取主题特征色，可用于对图片周边环境进行渲染。在有些网站中，随着图片的滚动周边配色也会变，基本原理就是对图片进行色彩提权，使用获取的主题颜色值对周边环境进行渲染。
 ### 对原版的改进： 支持对图片的部分区域进行取值，避免整副图片计算量过大造成的卡顿。例如可以只对图片边缘进行取值。
